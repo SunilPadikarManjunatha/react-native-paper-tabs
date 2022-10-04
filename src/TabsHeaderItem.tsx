@@ -130,7 +130,7 @@ export default function TabsHeaderItem({
               style={[
                 styles.text,
                 iconPosition === 'top' && styles.textTop,
-                !labelStyle ?  labelStyle : { ...theme.fonts.medium, color, opacity },
+                labelStyle ?  labelStyle : { ...theme.fonts.medium, color, opacity },
               ]}
             >
               {uppercase ? tab.props.label.toUpperCase() : tab.props.label}
