@@ -119,7 +119,7 @@ export default function TabsHeaderItem({
                 accessibilityElementsHidden={true}
                 importantForAccessibility="no"
                 name={tab.props.icon || ''}
-                style={{ labelStyle, opacity }}
+                style={[labelStyle, {opacity: opacity}]}
                 size={24}
               />
             </View>
