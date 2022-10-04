@@ -29,6 +29,7 @@ export default function TabsHeader({
   showLeadingSpace,
   uppercase,
   mode,
+  labelStyle,
 }: SwiperRenderProps) {
   const { colors, dark: isDarkTheme, mode: themeMode } = theme;
   const {
@@ -195,6 +196,7 @@ export default function TabsHeader({
               iconPosition={iconPosition}
               showTextLabel={showTextLabel}
               mode={mode}
+              labelStyle={labelStyle}
             />
           ))}
           <Animated.View
