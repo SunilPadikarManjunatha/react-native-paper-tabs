@@ -53,7 +53,7 @@ export default function TabsHeaderItem({
   iconPosition?: IconPosition;
   showTextLabel?: boolean;
   mode: Mode;
-  labelStyle: ViewStyle;
+  labelStyle?: ViewStyle;
 }) {
   const rippleColor = React.useMemo(
     () =>
