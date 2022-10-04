@@ -18,6 +18,7 @@ function Tabs({
   dark,
   style,
   defaultIndex,
+  labelStyle,
   mode = 'fixed',
   uppercase = true,
   iconPosition = 'leading',
@@ -38,6 +39,7 @@ function Tabs({
   mode?: Mode;
   onChangeIndex?: (index: number) => void;
   disableSwipe?: boolean;
+  labelStyle?: ViewStyle;
 }) {
   const onInnerChangeIndex = React.useCallback(
     (newIndex) => {
@@ -62,6 +64,7 @@ function Tabs({
       showLeadingSpace={showLeadingSpace}
       mode={mode}
       disableSwipe={disableSwipe}
+      labelStyle={labelStyle}
     >
       {children}
     </Swiper>
