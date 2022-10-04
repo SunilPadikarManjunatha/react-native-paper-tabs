@@ -6,6 +6,7 @@ import {
   View,
   Platform,
   TextProps,
+  ViewStyle,
 } from 'react-native';
 import { Text, TouchableRipple } from 'react-native-paper';
 import type { ReactElement } from 'react';
@@ -35,6 +36,7 @@ export default function TabsHeaderItem({
   mode,
   iconPosition,
   showTextLabel,
+  labelStyle,
 }: {
   tab: ReactElement<TabScreenProps>;
   tabIndex: number;
@@ -51,6 +53,7 @@ export default function TabsHeaderItem({
   iconPosition?: IconPosition;
   showTextLabel?: boolean;
   mode: Mode;
+  labelStyle: ViewStyle;
 }) {
   const rippleColor = React.useMemo(
     () =>
@@ -116,7 +119,7 @@ export default function TabsHeaderItem({
                 accessibilityElementsHidden={true}
                 importantForAccessibility="no"
                 name={tab.props.icon || ''}
-                style={{ color: color, opacity }}
+                style={{ labelStyle, opacity }}
                 size={24}
               />
             </View>
